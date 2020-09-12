@@ -6,43 +6,48 @@ $khWhite: #fbfef9;
 $khGreenBlack: #505a57;
 
 
-.h1 {
-  font-family: 'Ramaraja', serif;
-  font-weight: normal;
-  font-size: 6.4rem;
-  font-weight: 500;
-  letter-spacing: -1.15px;
-  color: $khBlack;
-}
+.knuckleheads {
+  .h1 {
+    font-family: 'Ramaraja', serif;
+    font-weight: normal;
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: -1.15px;
+    color: $khBlack;
+    line-height: 1.5;
+  }
 
-.h2 {
-  font-family: 'Trirong', serif;
-  color: $khBlack;
-  font-size: 2.4rem;
-  letter-spacing: 0;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-}
+  .h2 {
+    font-family: 'Trirong', serif;
+    color: $khBlack;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
 
-.body--regular,
-.body--small,
-.body--large {
-  font-family: 'Sorts Mill Goudy', serif;
+  }
 
-}
+  .body--regular,
+  .body--small,
+  .body--large {
+    font-family: 'Sorts Mill Goudy', serif;
 
-.body--regular {
+  }
 
-  font-size: 1.6rem;
-}
+  .body--regular {
 
-.lede {
-  font-size: 2rem;
-  max-width: 50ch;
-}
+    font-size: 1.6rem;
+  }
 
-.body--small {
-  font-size: 1.3rem;
+  .lede {
+    font-size: 1.25rem;
+    max-width: 50ch;
+  }
+
+  .body--small {
+    font-size: 1.3rem;
+  }
+
 }
 
 
@@ -51,10 +56,10 @@ $khGreenBlack: #505a57;
 .kh-button {
   font-family: 'Trirong', serif;
   font-style: uppercase;
-  border: 0.1rem solid $khBlack;
+
   padding: 0.75rem 1.5rem;
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1rem;
   background-color: $khBlack;
   color: $khWhite;
   transition: all .2s ease-in-out;
@@ -62,7 +67,6 @@ $khGreenBlack: #505a57;
 
 .kh-button:hover {
   background: $khBlue;
-  border-color: $khBlue;
 }
 
 .heading-gradient {
@@ -72,7 +76,7 @@ $khGreenBlack: #505a57;
 
 // Popup Container
 .popup-container {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -82,6 +86,7 @@ $khGreenBlack: #505a57;
   display: flex;
   align-items: center;
   flex-direction: column;
+  z-index: 99;
 
   @include breakpoint(sm) {
     justify-content: center;
@@ -92,7 +97,7 @@ $khGreenBlack: #505a57;
     background-color: $khWhite;
     text-align: center;
     border-radius: 4px;
-    max-width: 100rem;
+    max-width: 62.5rem;
     width: auto;
     display: flex;
     flex-direction: row;
@@ -101,7 +106,7 @@ $khGreenBlack: #505a57;
     box-shadow: 4px 4px 10px 0px #454851;
 
     .popup-content {
-      padding: 4rem;
+      padding: 2.5rem;
       align-self: center;
       width: 100%;
 
@@ -111,13 +116,13 @@ $khGreenBlack: #505a57;
     }
 
     .h2 {
-      margin-bottom: -1rem;
+      margin-bottom: -.625rem;
     }
 
     .error {
       color: $khOrange;
       font-weight: bold;
-      font-size: 1.8rem;
+      font-size: 1.125rem;
 
     }
 
@@ -136,7 +141,7 @@ $khGreenBlack: #505a57;
 
       @include breakpoint(sm) {
         max-width: 45%;
-        max-height: 500px;
+        max-height: 525px;
         overflow: hidden;
         display: flex;
         flex-direction: row;
@@ -163,16 +168,16 @@ $khGreenBlack: #505a57;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 1.618rem;
-    padding: 2rem 2rem 4rem 2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.25rem 2.25rem 1.25rem;
 
     .age-selector {
-      line-height: 4rem;
-      font-size: 2rem;
+      line-height: 2.5rem;
+      font-size: 1.25rem;
       padding: 0;
-      margin-right: 2rem;
-      width: 20rem;
+      margin-right: 1.25rem;
+      width: 12.5rem;
       text-align: center;
     }
   }

@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-     <link href="https://fonts.googleapis.com/css?family=Saira:300,400,600,700&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
   </head>
   <body class="home--page">
     <header class="home--nav">
-      <h1 class="h1 site--heading"><a class="link" href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      <h1 class="heading--large"><a class="link" href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       {% set projectlist = collections.projects %}

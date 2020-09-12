@@ -15,27 +15,40 @@ js: august.js
   <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
   <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Trirong&family=Trirong&family=Ramaraja&display=swap" rel="stylesheet"> 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&family=Trirong&family=Trirong&family=Ramaraja&display=swap"
+    rel="stylesheet">
   <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 </head>
 
 <body>
   <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
-    <article class="project--container">
-      <form class="link-builder">
-      <label for="originalLink">Starting Link</label>
-        <input type="text" name="originalLink" id="originalLink">
-        <label for="sizes"
-        <select multiple name="sizes" id="sizes">
-          <option value="">1440x560px</option>
-          <option value="">768x300px</option>
-          <option value="">540x300px</option>
-          <option value="">1440x960px</option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-      </form>
-    </article> 
+    <article class="project--container link-builder-container">
+      <section class="link-builder">
+        <h1 class="heading--xl">Widen Link Generator</h1>
+        <p class="lede"></p>
+        <form class="link-builder-form">
+          <label for="originalLink">Starting Link</label>
+          <input type="text" name="originalLink" id="originalLink">
+          <label for="sizes">Select Image sizes</label>
+          <select multiple name="sizes" id="sizes">
+            <option value="">1440x560px</option>
+            <option value="">768x300px</option>
+            <option value="">540x300px</option>
+            <option value="">1440x960px</option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <input type="submit" value="Generate Widen Links" class="submit">
+        </form>
+        <section class="output-links-container">
+          <ul class="output-links">
+            <li class="output-link"></li>
+          </ul>
+        </section>
+
+      </section>
+    </article>
     <article class="overview">
       {{ content | safe }}
     </article>
