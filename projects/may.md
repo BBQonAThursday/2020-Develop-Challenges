@@ -1,7 +1,8 @@
 ---
 title: May
-description: Developing a style guide along with Utility classes and styles for rapid development
-date: 2020-31-05
+description: Age verification module for entering online store.
+descIntro: Knuckleheads.
+date: 2020-05-01
 layout: layouts/may
 ---
 

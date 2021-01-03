@@ -9,25 +9,34 @@
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
      <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto:400,700|Roboto+Condensed:400,700" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;700&display=swap" rel="stylesheet"> 
   </head>
   <body class="home--page">
     <header class="home--nav">
-      <h1 class="heading--large"><a class="link" href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      <h1 class="heading--large monthly-dev"><a class="link" href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       {% set projectlist = collections.projects %}
       {% set postslistCounter = collections.posts | length %}
-      <article class="nav--container">
+      
+      <div class="year">
+        <h2 class="h2 heading--year">2021</h2>
+      </div>
+
+      <div class="year">
         <h2 class="h2 heading--year">2020</h2>
         {% include "projectlist.njk" %}
-      </article>
+      </div>
+      
+      
     </header>
    
-    <main class="home--intro">
+    {# <main class="home--intro">
       <article class="home--about">
         {{ content | safe }}
       </article>
-    </main>
+    </main> #}
 
   
   </body>

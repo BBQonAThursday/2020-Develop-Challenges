@@ -1,7 +1,8 @@
 ---
 title: August
-description: Link Building
-date: 2020-19-08
+description: Widen Link Generator. Generate multiple links based on a widen URL input.
+descIntro: Widen Link Generator.
+date: 2020-08-01
 layout: layouts/august
 ---
 

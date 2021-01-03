@@ -1,7 +1,8 @@
-<ul class="nav">
+<ul class="yearly-projects-list">
 {% for project in projectlist %}
   <li class="nav--item">
     <a href="{{ project.url | url }}" class="nav--link">{% if project.data.title %}{{ project.data.title }}{% else %}<code>{{ project.url }}</code>{% endif %}</a>
+    <p class="main--body-regular"><span class="underline">{{project.data.descIntro}}</span> {{ project.data.description }}</p>
   </li>
 {% endfor %}
 </ul>

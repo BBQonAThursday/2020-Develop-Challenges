@@ -1,7 +1,8 @@
 ---
 title: April
-description: Developing a style guide along with Utility classes and styles for rapid development
-date: 2020-30-04
+description: Knuckleheads. home page updates with curbside pickup options and information on items offered in store.
+descIntro: Knuckleheads.
+date: 2020-04-01
 layout: layouts/april
 ---
 

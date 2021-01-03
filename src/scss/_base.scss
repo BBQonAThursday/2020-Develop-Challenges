@@ -22,23 +22,34 @@ html {
 }
 
 .home--page {
-  background-color: $background;
+  background-color: $main-bg;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+  grid-gap: 1rem;
   color: $base-text;
   height: 100vh;
 }
 
 .home--nav {
   width: 100%;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  padding: 4rem 1rem;
+  grid-column: 2;
+}
 
-  @include breakpoint(lg) {
-    padding: 4rem 8rem;
+.monthly-dev {
+  position: relative;
+  padding-left: 72px;
+
+  &::before {
+    content: '';
+    background-color: $logo-bg;
+    height: 144px;
+    width: 144px;
+    position: absolute;
+    top: -25%;
+    left: 0;
+    display: block;
+    z-index: -1;
   }
 }
 
@@ -59,30 +70,35 @@ html {
   }
 }
 
-.nav--container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  width: 100%;
-  justify-content: space-between;
-  max-width: 75rem;
-  margin: 0 auto 4rem;
+
+.year {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8rem;
+
+  .heading--year {
+    flex-basis: calc(25% - 1rem);
+  }
 }
 
-.nav {
+.yearly-projects-list {
+  flex-basis: calc(75% - 1rem);
   display: flex;
-  flex-direction: column;
-  max-height: 32rem;
+  flex-direction: row;
   flex-wrap: wrap;
 
   .nav--item {
     font-weight: 400;
     margin-bottom: 0;
-    padding-right: 4rem;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    flex-basis: calc(33% - 1rem);
   }
 
   .nav--link {
-    color: $main-color-1;
+    color: $text-color-light;
     text-decoration: none;
+    font-weight: 500;
 
     &:hover {
       color: $c5;
@@ -91,15 +107,10 @@ html {
 }
 
 .home--intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $main-color-1;
-  color: $off-white;
   flex-basis: 50%;
   padding: 8rem;
   height: 100%;
+  grid-column: 2;
 
   .home--about {
 
@@ -107,4 +118,8 @@ html {
       max-width: 50ch
     }
   }
+}
+
+.underline {
+  text-decoration: underline;
 }

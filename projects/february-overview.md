@@ -1,7 +1,8 @@
 ---
 title: February
-month: february
-date: 2020-31-01
+descIntro: Visit Monterey.
+description: Travel landing page that features a multi section slider and progression bar.
+date: 2020-02-01
 overviewClass: february
 layout: layouts/february
 ---

@@ -9,13 +9,20 @@
 %body--base {}
 
 .heading--large {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Saira', sans-serif;
   font-size: 6rem;
+  font-weight: bold;
 }
 
 .heading--medium {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 4.8rem;
+}
+
+.main--body-regular {
+  font-family: 'Saira', sans-serif;
+  font-size: 1.6rem;
+  color: $text-color-light;
 }
 
 .heading--small {}
@@ -51,13 +58,12 @@
 }
 
 .h2 {
-  margin-bottom: 3rem;
-  font-family: Saira;
-  font-size: 4.8828125rem;
+  margin-bottom: 1.25rem;
+  font-family: 'Saira', sans-serif;
+  font-size: 3.6rem;
   line-height: 1.5;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: -2px;
 }
 
 .h3 {
@@ -67,18 +73,18 @@
   line-height: 1.5;
   font-weight: 700;
   font-style: normal;
-  letter-spacing: -2px;
+
 }
 
 .h4,
 .nav--item {
   margin-bottom: 3rem;
   font-family: Saira;
-  font-size: 3.125rem;
+  font-size: 2.4rem;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
-  letter-spacing: -2px;
+  color: $text-color-light;
 }
 
 .h5 {
@@ -100,6 +106,7 @@
   font-style: normal;
   letter-spacing: -2px;
 }
+
 
 
 @media screen and (max-width: 720px) {

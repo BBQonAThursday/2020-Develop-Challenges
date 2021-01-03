@@ -1,9 +1,11 @@
 ---
 title: January
 month: january
-date: 2020-31-01
+date: 2020-01-01
 layout: layouts/january.njk
 overviewClass: january
+descIntro: Flying.
+description: An airline home page for booking flights. With Promotions slider
 ---
 
 <h1 class="h1">{{title}}</h1>

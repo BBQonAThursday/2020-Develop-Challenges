@@ -1,7 +1,8 @@
 ---
 title: March
-description: Exploration of HTML markup and layout with flexbox and grid
-date: 2020-31-03
+description: Business landing page that focuses on unique stylings and responsive layout shifts.
+descIntro: INTO Architecture.
+date: 2020-03-01
 layout: layouts/march
 ---
 
