@@ -9,7 +9,8 @@
     "sass": "sass --style=compressed --source-map-urls=relative src/scss/main.scss _site/css/main.css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
-    "start": "npm-run-all sass --parallel watch:* && gulp watch",
+    "watch:gulp": "gulp watch",
+    "start": "npm-run-all sass --parallel watch:*",
     "build": "npm run sass && gulp build && eleventy"
   },
   "repository": {

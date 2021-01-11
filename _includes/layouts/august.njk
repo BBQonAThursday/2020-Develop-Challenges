@@ -31,12 +31,7 @@ js: august.js
           <label for="originalLink">Starting Link</label>
           <input type="text" name="originalLink" id="originalLink">
           <label for="sizes">Select Image sizes</label>
-          <select multiple name="sizes" id="sizes">
-            <option value="1440x560px">1440x560px</option>
-            <option value="768x300px">768x300px</option>
-            <option value="540x300px">540x300px</option>
-            <option value="1440x960px">1440x960px</option>
-          </select>
+          <input id="sizes" placeholder="comma seperated list of image sizes and retina values">
           <input type="submit" value="Generate Widen Links" class="submit">
         </form>
         <section class="output-links-container">

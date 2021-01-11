@@ -6,15 +6,12 @@ const link = 'https://embed.widencdn.net/img/springswindowfashions/uibybxc1db/20
 const outputList = document.querySelector('.output-links');
 
 const springsEmbed = 'https://embed.widencdn.net/img/springswindowfashions'
-const imageSizes = ['1440x560px', '768x300px', '540x300px', '1440x960px'];
+;
 const widenIdRegex = RegExp('(?<=springswindowfashions)\/(.*?)\/','g');
 const imageParamsRegex = RegExp('[^/]*$','g');
 
 const linkRegex = RegExp('(?<=springswindowfashions\/(?:.*))\/(.*?)\/','g');
 const regTest = link.match(linkRegex);
-let sizeArray = [];
-
-
 
 // let newUrl = imageWidenId[0] + 'options.value' + '/' + imageParams[0];
 // need to use the linkRegex to split the string to 3 parts:
@@ -27,19 +24,47 @@ let sizeArray = [];
 
 
 
-form.addEventListener('submit', buildLinks);
+form.addEventListener('submit', handleSubmit);
 
 
-function buildLinks(e) {
+function handleSubmit(e){
   e.preventDefault();
   let originalLink = inputLink.value;
-  // console.log(originalLink);
-  const imageWidenId = originalLink.match(widenIdRegex);
-  const imageParams = originalLink.match(imageParamsRegex);
+  let sizesArray = options.value.split(',');
+  console.log(sizesArray, originalLink);
+  const generatedLinks = buildLinks(originalLink, sizesArray);
+
+  outputHTML = generatedLinks.map(link => `
+  <li class="output-link">
+    ${link}
+  </li>`).join('');
+  console.log(outputHTML);
+  outputList.innerHTML = outputHTML;
+}
+
+
+function buildLinks(originalLink, sizesArray ) {
+
+  const linkId = originalLink.match(widenIdRegex);
+  // get the widen id from original Link
+  console.log("widen id is: " + linkId);
+
+  const trimmedSize = sizesArray.map(size => size.trim());
+  const processedLinks = trimmedSize.map(size => `${springsEmbed}${linkId}${size}`);
+   console.log(processedLinks);
+
+   return processedLinks;
+
+  // const imageWidenId = originalLink.match(widenIdRegex);
+  // const imageParams = originalLink.match(imageParamsRegex);
   // console.log(originalLink, options.value);
   
-  let newUrls = [springsEmbed + imageWidenId[0] + options.value + '@2x/' + imageParams[0],  springsEmbed + imageWidenId[0] + options.value + '/' + imageParams[0]];
-  console.log(newUrls);
+  // let newUrls = [springsEmbed + imageWidenId[0] + options.value + '@2x/' + imageParams[0],  springsEmbed + imageWidenId[0] + options.value + '/' + imageParams[0]];
+  // console.log(newUrls);
   
   
+}
+
+function createRetinaLinks(){
+
 }
