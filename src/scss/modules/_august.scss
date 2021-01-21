@@ -9,3 +9,16 @@
   max-width: 76.8rem;
   width: 100%;
 }
+
+.link-builder-form {
+  display: flex;
+  flex-direction: column;
+
+  * {
+    margin-bottom: 1.5rem;
+  }
+
+  input {
+    padding: 1rem;
+  }
+}

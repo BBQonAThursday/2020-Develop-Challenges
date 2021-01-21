@@ -29,10 +29,16 @@ js: august.js
         <p class="lede"></p>
         <form class="link-builder-form">
           <label for="originalLink">Starting Link</label>
-          <input type="text" name="originalLink" id="originalLink">
+          <input type="text" name="originalLink" id="originalLink"  placeholder="expected format: https://embed.widencdn.net/img/springswindowfashions/uibybxc1db/2048x495px/GRL0810_RN040113CA.jpeg?keep=c&crop=yes&u=fpq9bh"> 
           <label for="sizes">Select Image sizes</label>
           <input id="sizes" placeholder="comma seperated list of image sizes and retina values">
           <input type="submit" value="Generate Widen Links" class="submit">
+          
+          <label for="retina">
+            <input type="checkbox" checked name="retina">
+            Include Retina Sizes?
+          </label>
+
         </form>
         <section class="output-links-container">
           <ul class="output-links">
