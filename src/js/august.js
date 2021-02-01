@@ -93,7 +93,6 @@ function handleCopy(e) {
 }
 
 
-
 function buildLinks(originalLink, sizesArray ) {
  
   // TODO handle the retina sizes checkbox and generate those links as well
@@ -105,7 +104,7 @@ function buildLinks(originalLink, sizesArray ) {
   // console.log("widen id is: " + linkId);
 
   const trimmedSizes = sizesArray.map(size => size.trim());
-  const processedLinks = trimmedSizes.map(size => `${springsEmbed}${linkId}${size}${endUrl}`);
+  const processedLinks = trimmedSizes.map(size => `${springsEmbed}${linkId}${size}/${endUrl}`);
 
   // console.log(trimmedSizes);
   // console.log(processedLinks);
