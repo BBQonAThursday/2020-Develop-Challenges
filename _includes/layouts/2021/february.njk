@@ -1,0 +1,89 @@
+---
+title: February
+month: februrary
+description: build out of January design project
+date: 2021-02-02
+
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ renderData.title or title or metadata.title }}</title>
+  <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+  <link href="https://fonts.googleapis.com/css?family=Sarabun:300,400,500,700,800&display=swap" rel="stylesheet">
+
+  
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+</head>
+
+<body>
+  <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <article class="project--container">
+      <div class="container">
+        <div class="row">
+          <div class="constrained-width-carousel m-b-xl" id="cw-carousel">
+            <div class="slider-block slider-style--60-40">
+              <img class="slider-image" alt="graber-10151-solar-eco-performance-shades-rs20-v1.tif"
+                src="https://embed.widencdn.net/img/springswindowfashions/ayxwqy7065/658x500px/graber-10151-solar-eco-performance-shades-rs20-v1.jpg?crop=true&keep=c&q=80&color=ffffffff&u=fpq9bh">
+              <div class="slider-block--content-container graber-grullo placement-left p-5">
+                <div class="slider-block--content text-center text-lg-start">
+                  <div class="slider-block--CTA">
+                    <div class="font-serif heading-xl">Better Fabrics for a Better World</div>
+                    <div class="font-sans-serif heading-md">Healthy Home and Eco-Friendly Collections from LightWeaves
+                      Solar Shades</div>
+                    <a class="btn btn--primary graber-cream" href="#">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="slider-block slider-style--60-40">
+              <img class="slider-image" alt="graber-10151-solar-eco-performance-shades-rs20-v1.tif"
+                src="https://embed.widencdn.net/img/springswindowfashions/ayxwqy7065/658x500px/graber-10151-solar-eco-performance-shades-rs20-v1.jpg?crop=true&keep=c&q=80&color=ffffffff&u=fpq9bh">
+              <div class="slider-block--content-container graber-grullo placement-left p-5">
+                <div class="slider-block--content text-center text-lg-start">
+                  <div class="slider-block--CTA">
+                    <div class="font-serif heading-xl">Better Fabrics for a Better World</div>
+                    <div class="font-sans-serif heading-md">Healthy Home and Eco-Friendly Collections from LightWeaves
+                      Solar Shades</div>
+                    <a class="btn btn--primary graber-cream" href="#">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="overview">
+      {{ content | safe }}
+    </article>
+    </main>
+    {% if js %}
+    {# <script type="text/javascript" src="../../js/{{js}}"></script> #}
+    {% endif %}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#cw-carousel').slick({          
+          autoplay: true,
+          adaptiveHeight: true,
+          dots: true,
+          arrows: false,
+        });
+      });
+
+    </script>
+</body>
+
+</html>

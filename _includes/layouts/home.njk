@@ -20,8 +20,20 @@
       {% set projectlist = collections.projects %}
       {% set postslistCounter = collections.posts | length %}
       
+      
       <div class="year">
         <h2 class="h2 heading--year">2021</h2>
+        <ul class="yearly-projects-list">
+        {% for project in projectlist %}
+          {% if project.data.year == "2021" %}
+            <li class="nav--item">
+              <a href="{{ project.url | url }}" class="nav--link">{{ project.data.title }}</a>
+              <p class="main--body-regular"><span class="underline">{{project.data.descIntro}}</span> {{ project.data.description }}</p>
+            </li>
+          {% endif %}
+        {% endfor %}
+</ul>
+
       </div>
 
       <div class="year">

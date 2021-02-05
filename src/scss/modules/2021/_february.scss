@@ -1,0 +1,160 @@
+
+
+.constrained-width-carousel {
+
+    .slider-block {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-height: 500px;
+        height: 100%;
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+        
+        .slider-image {
+            order: 1;
+        }
+    }
+}
+.slider-block--content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    position: absolute;
+    bottom: 0;
+
+    @include breakpoint(md) {
+        position: relative;
+        
+    }
+
+    &.placement-left{
+        @include breakpoint(md) {
+            order: 2;
+        }
+    }    
+
+    &.placement-right {
+        @include breakpoint(md) {
+            order: 0;
+        }
+    }
+}
+.slider-style--60-40 {
+    .slider-image {
+        width: 100%;
+        @include breakpoint(md) {
+            max-height: 500px;
+            width: 60%;
+        }
+    }
+    .slider-block--content-container {
+        width: 100%;
+
+        @include breakpoint(md) {
+            width: 40%;
+        }
+    }
+}
+
+.slider-style--50-50 {
+
+}
+
+.slider-style--content-overlay {
+
+}
+
+.slider-style--product-launch {
+
+}
+
+.slider-style--video {
+
+}
+
+.graber-black{
+    @include dc(#101820, #FFF);
+    
+}
+.graber-wenge{
+    @include dc(#605c57, #FFF);
+    
+}
+.graber-cool-mint{
+    @include dc(#b5e3d8, #000);
+    
+}
+.graber-flagstone-blue{
+    @include dc(#7fa9ae, #FFF);
+    
+}
+.graber-grullo{
+    @include dc(#94a596, #FFF);
+    
+}
+.graber-gray{
+    @include dc(#b1b3b3, #000);   
+}
+
+.graber-cream {
+    @include dc(#DAE0DB, #000);
+}
+
+.graber-product-faux-wood-blinds{
+    @include dc(#cc8341, #000);
+    
+}
+.graber-product-natural-shades{
+    @include dc(#43695b, #FFF);
+    
+}
+.graber-product-cellular-pleated-shade{
+    @include dc( #6e80a9, #FFF);
+    
+}
+.graber-product-drapery-roman-shades{
+    @include dc(#425563, #FFF);
+    
+}
+.graber-product-solar-roller-shades{
+    @include dc(#b2292e, #FFF);
+    
+}
+.graber-product-vertical-vinyl-horizontal-blinds{
+    @include dc(#614b79, #FFF);
+    
+}
+.graber-product-shutters{
+    @include dc(#cba052, #000);
+}
+.graber-product-sheer-layered-shades{
+    @include dc(#732e4a, #FFF);
+}
+
+.font-serif {
+    
+}
+
+.font-sans-serif {
+
+}
+
+.heading-xl {
+
+}
+
+.heading-lg {
+
+}
+
+.heading-md {
+
+}
+
+.heading-sm {
+
+}

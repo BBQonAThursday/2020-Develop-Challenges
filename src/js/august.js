@@ -12,6 +12,14 @@ const imageParamsRegex = RegExp('[^/]*$','g');
 
 const widenUrlParamsRegex = RegExp('(?<=springswindowfashions\/.*\/.*\/)(.*$)','g');
 
+let preMadeSizes = 
+  [
+    {
+      "name": "horizons sliders",
+      "sizes": "1440x655px@2x,1440x655px,768x590px@2x,768x590px,540x590px@2x,540x590px"
+    }
+  ]
+
 
 // let newUrl = imageWidenId[0] + 'options.value' + '/' + imageParams[0];
 // need to use the linkRegex to split the string to 3 parts:

@@ -75,3 +75,7 @@ $parallax-ios         : true !default;
 }
 
 // End of magic parallax mixins
+@mixin dc($color, $textColor) { // dc is short for dynamic color
+  background: $color;
+  color: text($textColor);
+}
