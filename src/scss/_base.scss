@@ -19,6 +19,16 @@ html {
   width: max-content;
   margin-left: auto;
   margin-right: auto;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 66ch;
+    line-height: 1.5;
+  }
 }
 
 .home--page {
