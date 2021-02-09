@@ -1,0 +1,146 @@
+$sig-black: #615d59;
+$sig-blue: #415866;
+$sig-gray: #7a7d81;
+$sig-purple: #686e9f;
+$sig-teal: #7d98a3;
+$white: #FFF;
+
+$sig-product-wood-faux: #00966c;
+$sig-product-woven-woods: #ceb888;
+$sig-product-cellular-pleated: #bfcc80;
+$sig-product-roller-solar:#973f54;
+$sig-product-vertical-vinyl:#b3b0c4;
+$sig-product-shutters:#e03e52;
+$sig-product-sheer-layered:#934054;
+$sig-product-aluminum: #e69e6c;
+$sig-product-basics:#93b479;
+
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.sig-series {
+  font-size: 16px;
+  // heading styles 
+
+  .heading-xl {}
+
+  .heading-lg {}
+
+  .heading-md {}
+
+  .heading-sm {}
+
+  .font-med {}
+
+  .font-light {}
+
+
+  // body copy styles
+
+  .body-lg {
+    max-width: 70ch;
+  }
+
+  .body-md {}
+
+  .body-sm {}
+
+  // Color
+  .sig-black {}
+
+  .sig-blue {
+    background-color: $sig-blue;
+    color: $white;
+  }
+
+  .sig-gray {}
+
+  .sig-purple {}
+
+  .sig-teal {}
+
+  .sig-product-wood-faux {}
+
+  .sig-product-woven-woods {}
+
+  .sig-product-cellular-pleated {}
+
+  .sig-product-roller-solar {
+    background-color: $sig-product-roller-solar;
+  }
+
+  .sig-product-vertical-vinyl {}
+
+  .sig-product-shutters {}
+
+  .sig-product-sheer-layered {}
+
+  .sig-product-basics {}
+
+  // List styles
+
+  .documents-list {
+
+    .document-list-item {}
+
+    .document {}
+
+    .toolkit {}
+
+    .video {}
+  }
+
+
+}
+
+// product launch page styles
+.upcoming-product-launches {
+
+
+  .color-bar {}
+
+  .launch-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .samplebook-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .samplebook {
+      background: rgba($sig-blue, .15);
+      position: relative;
+
+      .launch-date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+
+      .sb-price {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba($sig-blue, .4);
+      }
+    }
+  }
+
+
+}
