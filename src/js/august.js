@@ -12,17 +12,7 @@ const imageParamsRegex = RegExp('[^/]*$','g');
 
 const widenUrlParamsRegex = RegExp('(?<=springswindowfashions\/.*\/.*\/)(.*$)','g');
 
-<<<<<<< HEAD
-let preMadeSizes = 
-  [
-    {
-      "name": "horizons sliders",
-      "sizes": "1440x655px@2x,1440x655px,768x590px@2x,768x590px,540x590px@2x,540x590px"
-    }
-  ]
-=======
 const tooltip = document.querySelector('.tooltip');
->>>>>>> 7c4a82461b701f9210eaf42d1c15eb840e26240f
 
 
 // let newUrl = imageWidenId[0] + 'options.value' + '/' + imageParams[0];
