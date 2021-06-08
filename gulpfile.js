@@ -81,4 +81,8 @@ gulp.task('watch', function() {
   gulp.watch('./img/*', gulp.parallel('image'));
 });
 
+gulp.task('build', function() {
+  gulp.parallel('scripts','styles','image');
+});
+
 gulp.task('default', gulp.parallel('scripts','styles','image','watch'));
