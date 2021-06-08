@@ -25,17 +25,35 @@ $sig-product-basics:#93b479;
   font-size: 16px;
   // heading styles 
 
-  .heading-xl {}
+  .heading-xl {
+    font-size: 48px;
+    line-height: 1.5;
+  }
 
-  .heading-lg {}
+  .heading-lg {
+    font-size: 36px;
+    line-height: 1.5;
+  }
 
-  .heading-md {}
+  .heading-md {
+    font-size: 24px;
+    line-height: 1.5;
+  }
 
-  .heading-sm {}
+  .heading-sm {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 
-  .font-med {}
+  .font-med {
+    font-family: 'Gotham Medium';
+    text-transform: uppercase;
+  }
 
-  .font-light {}
+  .font-light {
+    font-family: 'Gotham Light';
+    text-transform: uppercase;
+  }
 
 
   // body copy styles
@@ -99,6 +117,59 @@ $sig-product-basics:#93b479;
 // product launch page styles
 .upcoming-product-launches {
 
+  .color-bar {}
+
+  .launch-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .samplebook-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .samplebook {
+      background: rgba($sig-blue, .15);
+      position: relative;
+
+      .launch-date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+      }
+
+      .sb-price {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba($sig-blue, .4);
+      }
+    }
+  }
+}
+
+
+.graber {
+
+  .bg-roller-solar {
+    background-color:#b2292e;
+  }
+}
+
+// product launch page styles
+.product-launch {
 
   .color-bar {}
 
@@ -141,6 +212,37 @@ $sig-product-basics:#93b479;
       }
     }
   }
+}
 
+.product-launch .samplebook-container {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.product-launch .samplebook-container .samplebook {
+  background: #dde7e9;
+  position: relative;
+}
+
+.product-launch .samplebook-container .samplebook .launch-date {
+  position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+}
+
+.product-launch .samplebook-container .samplebook .sb-price {
+  position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #dde7e9;
 }
