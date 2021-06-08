@@ -1,7 +1,7 @@
 {
-  "title": "Monthly Dev",
-  "url": "design-challenge.joelgamble.io",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Joel Gamble",
+  "url": "joelgamble.io",
+  "description": "I'm a web developer and designer. This is my website and digital playground.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
     "filename": "feed.xml",

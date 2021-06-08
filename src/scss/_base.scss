@@ -50,6 +50,7 @@ html {
   position: relative;
   padding-left: 72px;
 
+
   &::before {
     content: '';
     background-color: $logo-bg;
@@ -60,7 +61,15 @@ html {
     left: 0;
     display: block;
     z-index: -1;
+    transition: all .2s ease-in-out;
   }
+
+  &:hover {
+    &::before {
+      width: 485px;
+    }
+  }
+
 }
 
 .site--heading {
@@ -106,12 +115,12 @@ html {
   }
 
   .nav--link {
-    color: $text-color-light;
-    text-decoration: none;
-    font-weight: 500;
+    color: $text-color;
+    text-decoration: underline;
+    font-weight: 700;
 
     &:hover {
-      color: $c5;
+      color: $text-color-light;
     }
   }
 }
@@ -130,6 +139,35 @@ html {
   }
 }
 
-.underline {
-  text-decoration: underline;
+
+
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+  .color {
+    height: 25px;
+    width: 25px;
+  }
+
+  .c1 {
+    background-color: $logo-bg;
+  }
+
+  .c2 {
+    background-color: $text-color;
+  }
+
+
+
+  .c4 {
+    background-color: $c5;
+  }
+
+  .c5 {
+    background-color: $c2;
+  }
 }

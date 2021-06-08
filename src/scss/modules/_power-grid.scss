@@ -1,0 +1,48 @@
+.power-grid-container {
+  --yellow: hsl(53, 98%, 65%);
+  --green: hsl(106, 18%, 66%);
+  --blue: hsl(205, 51%, 32%);
+  --red: hsl(357, 86%, 64%);
+  --purple: hsl(244, 24%, 59%);
+  --black: hsl(210, 3%, 12%);
+  --offwhite: hsla(165, 100%, 99%, 1);
+  --pageBackground: hsla(106, 18%, 66%, .3); // Green 30%
+  --base-size: 16px;
+
+  background-color: var(--pageBackground);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  margin-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heading--md {
+    font-size: calc(var(--base-size) * 1.5);
+    font-weight: bold;
+  }
+
+  .game-setup {
+    width: 24rem;
+    height: 24rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--offwhite);
+    box-shadow: 0 0 20px 10px var(--pageBackground);
+
+    .game-setup-content {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+
+    .game-actions {}
+  }
+
+}

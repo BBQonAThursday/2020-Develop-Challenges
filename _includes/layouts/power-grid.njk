@@ -1,0 +1,44 @@
+---
+title: Power Grid
+date: 2020-02-05
+js: power-grid.js
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ renderData.title or title or metadata.title }}</title>
+  <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+  <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Vidaloka&display=swap" rel="stylesheet">
+  <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+</head>
+
+<body>
+  <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <article class="power-grid-container">
+      <div class="game-setup">
+        <div class="game-setup-content">
+          <div class="heading--md mb-3">Power Grid</div>
+          <div class="game-actions">
+            <button id="create-game" class="game-action-button">Create Game</button>
+            <button id="join-game" class="game-action-button">Join Game</button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="overview">
+      {{ content | safe }}
+    </article>
+    </main>
+</body>
+{% if js %}
+<script type="text/javascript" src="../../js/{{js}}"></script>
+{% endif %}
+
+</html>
